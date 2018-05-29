@@ -1,3 +1,9 @@
+This is a forked version of Gadgetbridge. The changes made to this are to prevent the duplicate notifications I was receiving on my Amazfit Bip. 
+
+Original Repo: [https://github.com/Freeyourgadget/Gadgetbridge](https://github.com/Freeyourgadget/Gadgetbridge)
+
+Original Readme follows:
+
 Gadgetbridge
 ============
 

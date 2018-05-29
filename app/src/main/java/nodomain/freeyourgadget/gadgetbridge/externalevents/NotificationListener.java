@@ -50,7 +50,9 @@ import android.support.v7.graphics.Palette;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import nodomain.freeyourgadget.gadgetbridge.GBApplication;
@@ -85,6 +87,9 @@ public class NotificationListener extends NotificationListenerService {
             = "nodomain.freeyourgadget.gadgetbridge.notificationlistener.action.reply";
 
     private LimitedQueue mActionLookup = new LimitedQueue(16);
+
+    // Keeps track of when was the last time a package sent out a notification event
+    private Map<String, Long> packageToUtc = new HashMap<>();
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
@@ -265,7 +270,23 @@ public class NotificationListener extends NotificationListenerService {
             return;
         }
 
+        if (shouldIgnoreAsDuplicate(source)) {
+            LOG.info("Not forwarding notification, as it was sent less than 100ms to a previous message from the same package");
+            return;
+        }
+
         GBApplication.deviceService().onNotification(notificationSpec);
+    }
+
+    private boolean shouldIgnoreAsDuplicate(String source) {
+        if (!packageToUtc.containsKey(source)) {
+            packageToUtc.put(source, 0L);
+        }
+        if (packageToUtc.get(source) < System.currentTimeMillis()) {
+            packageToUtc.put(source, System.currentTimeMillis() + 100);
+            return false;
+        }
+        return true;
     }
 
     private void dissectNotificationTo(Notification notification, NotificationSpec notificationSpec, boolean preferBigText) {
