@@ -62,7 +62,7 @@
 \n 
 \nMerk: Du må ikke installere .res og .gps hvis disse er akkurat de samme som dem som allerede er installert. 
 \n 
-\nUTESTET, KAN HAVARERE ENHETEN DIN, FORTSETT PÅ EGEN RISIKO!</string>
+\nFORTSETT PÅ EGEN RISIKO!</string>
     <string name="fw_multi_upgrade_notice">Du er i ferd med å installere %1$s- og %2$s-fastvarene isteden for dem som er installert nå på ditt Mi Band.</string>
     <string name="miband_firmware_known">Denne fastvaren har blitt testet og er kompatibel med Gadgetbru.</string>
     <string name="miband_firmware_unknown_warning">Denne fastvaren er utestet og er kanskje ikke kompatibel med Gadgetbru. 
@@ -584,4 +584,24 @@
     <string name="pref_summary_pebble_gatt_clientonly">Dette er kun for Pebble 2 og eksperimentelt, prøv dette hvis du har tilkoblingsproblemer</string>
     <string name="menuitem_shortcut_alipay">Alipay (snarvei)</string>
     <string name="menuitem_shortcut_weather">Vær (snarvei)</string>
+    <string name="fw_upgrade_notice_miband3">Du er i ferd med å installere %s-fastvaren på din Mi Band 3.
+\n
+\nInstaler først .fw-fila, og dernest .res-fila. Klokka di vil starte på nytt etter at du installerer .fw-fila.
+\n
+\nMerk: Du trenger ikke å installere .res hvis du har akkurat den samme installert.
+\n
+\nUTESTET, KAN HAVARERE ENHETEN, FORTSETT PÅ EGEN RISIKO!</string>
+    <string name="devicetype_miband3">Mi Band 3</string>
+    <string name="devicetype_q8">Q8</string>
+    <string name="blacklist_all_for_notifications">Svartelist merknader fra alle disse</string>
+    <string name="whitelist_all_for_notifications">Hvitlist merknader fra alle disse</string>
+
+
+    <string name="pref_auto_fetch">Hent aktivitetsdata automatisk</string>
+
+    <string name="pref_auto_fetch_summary">Henting skjer ved skjermopplåsing, og fungerer kun hvis en låsemekanisme er valgt!</string>
+
+    <string name="pref_auto_fetch_limit_fetches">Minimumstid mellom innhentinger</string>
+    <string name="pref_auto_fetch_limit_fetches_summary">Henter hvert %d minutt</string>
+
     </resources>

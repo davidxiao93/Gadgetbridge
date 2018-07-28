@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="0.28.1" versioncode="135">
+        <change>Fix wrong weather icon mapping in rare cases</change>
+        <change>Fix device discovery on Android 4.4</change>
+        <change>Amazfit Bip: Use UTC in gpx tracks for better compatibility with external software</change>
+        <change>Amazfit Bip: Add the (localized) activity type to the gpx filename</change>
+        <change>Amazfit Bip: Fix weather on latest firmwares</change>
+    </release>
+    <release version="0.28.0" versioncode="134">
+        <change>Initial support for ZeTime</change>
+        <change>Amazfit Bip/Cor: Rework firmware detection to cope with new version scheme</change>
+        <change>Amazfit Bip: Support setting language to Russian</change>
+        <change>Amazfit Cor: Support language switching on newer firmwares</change>
+        <change>Mi Band 3: support setting language (english and spanish tested)</change>
+        <change>Mi Band 3: Fix pairing</change>
+        <change>Mi Band 3: Send AQI to enable display of current temperature</change>
+    </release>
+    <release version="0.27.1" versioncode="133">
+        <change>Pebble: Change appstore search to point to RomanPort's pebble appstore</change>
+        <change>Mi Band 3: Allow flashing fonts (untested)</change>
+        <change>Amazfit Bip: Allow flashing latest firmwares</change>
+        <change>Amazfit Cor: Allow flashing Bip fonts (untested)</change>
+        <change>Allow to limit auto fetch to a user configurable time interval</change>
+    </release>
+    <release version="0.27.0" versioncode="132">
+        <change>Initial support for Mi Band 3 (largely untested, needs to be connected to Mi Fit once)</change>
+        <change>Option for automatic activity sync after screen unlock</change>
+        <change>Allow hiding activity transfer notification on Android Oreo and above</change>
+        <change>Allow blacklisting of pebblekit notifications for individual apps</change>
+        <change>Allow blacklisting all application at once</change>
+        <change>Forward Skype notifications to wearable even if "local only" flag is set</change>
+        <change>Show Gadgetbridge logo behind cards in main activity</change>
+        <change>Always stop BT/BTLE discovery when exiting the discovery activity</change>
+        <change>Amazfit Bip/Cor: Fix scheduled setting for "display on lift wrist" preference</change>
+        <change>Amazfit Bip/Cor: add recent firmwares to whitelist</change>
+        <change>Pebble: Fix a rare crash in webview</change>
+    </release>
     <release version="0.26.5" versioncode="131">
         <change>Fix autoreconnect at boot on recent Android versions</change>
         <change>Bluetooth connection is more stable on Oreo</change>
@@ -54,7 +90,7 @@
         <change>Add 'Ł' and 'ł' to transliteration map</change>
         <change>Omnijaws Weather: correctly pick todays' min and max temperature</change>
         <change>Fix alarm details activity on small screen</change>
-        <change>Pebble: minic online check of TrekVolle when using background js</change>
+        <change>Pebble: mimic online check of TrekVolle when using background js</change>
     </release>
     <release version="0.24.4" versioncode="121">
         <change>Amazfit Bip: Fix language setting on new firmwares</change>
